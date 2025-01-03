@@ -1,0 +1,46 @@
+---
+ // Import libraries
+import { Image } from "astro:assets";
+
+// Import components
+import NavBar from "./NavBar.astro";
+
+// Import assets
+import Logo from '../assets/images/logo.svg'; 
+---
+
+<!doctype html>
+<html lang="en">
+
+    <header class="divider-bottom">
+			<div class="wrapper flex">
+      <div class="branding flex">
+        <Logo class="logo"/>
+				<h1><a href='/'>michael-h.dk</a></h1>
+      </div>
+			<NavBar />
+		</div>
+    </header>
+
+		<style>
+
+			header {
+				padding-block: 0.75rem;
+			}
+			
+			.branding {
+				--flex-gap: 0.5rem;
+			}
+
+			.logo {
+				width: 65px;
+				height: auto;
+			}
+
+			h1 a {
+				text-decoration: none;
+				color: currentColor;
+				font-size: var(--fs-med);
+			}
+
+		</style>

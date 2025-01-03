@@ -1,0 +1,33 @@
+---
+const navigation = [
+  {
+    href: '/',
+    name: 'Home',
+  },
+  {
+    href: '/projects',
+    name: 'Projects',
+  },
+  {
+    href: '/javascript',
+    name: 'Javascript',
+  },
+  {
+    href: '/generative-art',
+    name: 'Generative Art',
+  },
+  {
+    href: '/contact',
+    name: 'Contact',
+  },
+]
+---
+
+<nav>
+  <ul class="flex">
+    {
+    navigation.map(link => <li><a href={link.href}>{link.name}</a></li>)
+    }
+  </ul>
+</nav>
+
