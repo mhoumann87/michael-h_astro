@@ -23,4 +23,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-/src/assets/images/**/*[.jpg, .jpeg, .png, .gif]
+/src/assets/images/*.jpg
+/src/assets/images/*.jpeg
+/src/assets/images/*.png
+/src/assets/images/*.gif
