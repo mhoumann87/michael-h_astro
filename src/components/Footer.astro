@@ -1,0 +1,100 @@
+---
+import Github from '../assets/images/github.svg';
+import LinkedIn from '../assets/images/linkedin.svg';
+import Bluesky from '../assets/images/bluesky.svg';
+import Mastedon from '../assets/images/mastedon.svg';
+
+const icons = [
+  {
+    name: 'github',
+    link: 'https://github.com/mhoumann87/',
+    icon: Github,
+  },
+  {
+    name: 'linkedin',
+    link: 'https://www.linkedin.com/in/michael-houmann-3b03654b/',
+    icon: LinkedIn,
+  },
+  {
+    name: 'bluesky',
+    link: 'https://bsky.app/profile/michaelhoumann.bsky.social',
+    icon: Bluesky,
+  },
+  {
+    name: 'mastedon',
+    link: 'https://c.im/@michaelhoumann',
+    icon: Mastedon,
+  },
+]
+---
+
+<footer class="divider-top">
+
+  <div class="wrapper flex">
+
+    <div class="copyright">
+      <p>&copy;<span id="year"></span> 
+      <a href="mailto:admin@michael-h.dk">Michael Houmann</a>.
+      All rights reserved
+    </p>
+    </div>
+
+    
+    <ul class="social flex">
+    
+      <li>
+        <a href="https://github.com/mhoumann87" 
+          target="_blank" 
+          rel="noopener noreferrer">
+
+          <Github />
+      
+        </a>
+        <span class="sr-only">Navigate to my github profile</span>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank" 
+        rel="noopener noreferrer">
+
+        <LinkedIn />
+      
+        </a>
+        <span class="sr-only">Navigate to my linkedin profile</span>
+      </li>
+
+      <li>
+        <a href="https://bsky.app/profile/michaelhoumann.bsky.social/"  target="_blank" 
+            rel="noopener noreferrer">
+
+        <Bluesky />
+      
+        </a>
+        <span class="sr-only">Navigate to my bluesky profile</span>
+      </li>
+
+      <li>
+        <a href="https://c.im/@michaelhoumann" 
+        target="_blank" 
+        rel="noopener noreferrer">
+
+        <Mastedon />
+      
+        </a>
+        <span class="sr-only">Navigate to my mastedon profile</span>
+      </li>
+    
+    </ul>
+  </div>
+
+  </div>
+</footer>
+
+<script>
+
+  (document.getElementById('year') as HTMLElement).innerText =
+new Date().getFullYear() > 2024 ? 
+    `2024 - ${new Date().getFullYear()}` : 
+    '2024';
+ 
+</script>
