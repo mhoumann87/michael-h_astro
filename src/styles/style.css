@@ -361,5 +361,4 @@ ul {
 
 #main {
   scroll-margin-block-start: 5rem;
-  grid-template-columns: repeat(auto-fit, minmax(65ch, 1fr));
 }
