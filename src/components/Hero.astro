@@ -1,0 +1,76 @@
+---
+import { Picture } from 'astro:assets';
+
+import heroImg from '../assets/images/header-img.jpg';
+---
+
+<section class="hero grid" role="banner">
+
+  <div class="image-box">
+
+    <Picture 
+      src={heroImg} 
+      formats={['avif', 'webp']} 
+      alt="Girl looking out over the ocean - placeholder img" 
+    />
+
+  </div>
+
+  <div class="filter-box"></div>
+    
+    <div class="headline">
+    
+      <h2>michael-h.dk</h2>
+      <p>multimedia designer & web developer</p>
+
+    </div>
+  
+ 
+
+</section>
+
+<style>
+  
+  .hero {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    margin-block-start: -1rem;
+  }
+
+  .image-box {
+    grid-column: 1 / 6;
+    grid-row-start: 1;
+  }
+
+  .filter-box {
+    grid-column: 1 / -1;
+    grid-row-start: 1;
+    background-image: linear-gradient(
+      to right,
+      hsl(from var(--clr-background) h s l / 0.4) 20%,
+      hsl(from var(--clr-background) h s l / 0.6) 40%,
+      hsl(from var(--clr-background) h s l / 0.9) 60%,
+      hsl(from var(--clr-background) h s l / 1) 80%,
+      var(--clr-background)
+    );
+  }
+
+  .headline {
+    grid-column: 4 / -1;
+    grid-row-start: 1;
+    place-self: center;
+  }
+
+  h2 {
+    font-size: var(--fs-x-large);
+    margin: 0;
+  }
+
+  p {
+    line-height: 1;
+    margin: 0;
+    margin-inline-start: 0.5em;
+    font-size: var(--fs-mid);
+  }
+
+</style>
