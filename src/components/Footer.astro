@@ -4,28 +4,7 @@ import LinkedIn from '../assets/images/linkedin.svg';
 import Bluesky from '../assets/images/bluesky.svg';
 import Mastedon from '../assets/images/mastedon.svg';
 
-const icons = [
-  {
-    name: 'github',
-    link: 'https://github.com/mhoumann87/',
-    icon: Github,
-  },
-  {
-    name: 'linkedin',
-    link: 'https://www.linkedin.com/in/michael-houmann-3b03654b/',
-    icon: LinkedIn,
-  },
-  {
-    name: 'bluesky',
-    link: 'https://bsky.app/profile/michaelhoumann.bsky.social',
-    icon: Bluesky,
-  },
-  {
-    name: 'mastedon',
-    link: 'https://c.im/@michaelhoumann',
-    icon: Mastedon,
-  },
-]
+const arr = [Github, LinkedIn, Bluesky, Mastedon];
 ---
 
 <footer class="divider-top">
@@ -83,7 +62,7 @@ const icons = [
         </a>
         <span class="sr-only">Navigate to my mastedon profile</span>
       </li>
-    
+
     </ul>
   </div>
 
@@ -96,5 +75,39 @@ const icons = [
 new Date().getFullYear() > 2024 ? 
     `2024 - ${new Date().getFullYear()}` : 
     '2024';
- 
+
 </script>
+
+<style>
+  footer {
+  padding-block-start: 1em;
+  margin-block-end: 1.5em;
+}
+
+.social {
+  --flex-gap: 1.5rem;
+}
+
+.social-icon {
+  height: 32px;
+  width: auto;
+}
+
+/* Colors for social icons */
+#github {
+  fill: #000000;
+}
+
+#linkedin {
+  fill: #007ab6;
+}
+
+#mastodon {
+  fill: #6364ff;
+}
+
+#bluesky {
+  fill: #295ef6;
+}
+
+</style>
