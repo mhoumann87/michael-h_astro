@@ -9,7 +9,7 @@ const arr = [Github, LinkedIn, Bluesky, Mastedon];
 
 <footer class="divider-top">
 
-  <div class="wrapper flex">
+  <div class="footerBar wrapper flex">
 
     <div class="copyright">
       <p>&copy;<span id="year"></span> 
@@ -84,8 +84,20 @@ new Date().getFullYear() > 2024 ?
   margin-block-end: 1.5em;
 }
 
+.footerBar {
+  --flex-dir: column;
+}
+
+@media screen and (width > 900px) {
+  .footerBar {
+    --flex-dir: row;
+  }
+}
+
 .social {
   --flex-gap: 1.5rem;
+  --flex-dir: row;
+  margin: 0;
 }
 
 .social-icon {
